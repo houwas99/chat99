@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Telegram Clone</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="app">
+    <header>
+      <h1>💬 Telegram Clone</h1>
+      <input id="username" placeholder="Nom d'utilisateur" />
+      <input id="room" placeholder="Salon" value="general" />
+      <button id="join">Rejoindre</button>
+    </header>
+
+    <main id="chat" class="hidden">
+      <div id="messages"></div>
+      <div id="typing"></div>
+      <div class="input-area">
+        <input id="msg" placeholder="Tapez un message..." />
+        <input type="file" id="fileInput" hidden />
+        <button id="send">Envoyer</button>
+        <button id="imgBtn">📎</button>
+      </div>
+    </main>
+  </div>
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="client.js"></script>
+</body>
+</html>
